@@ -26,7 +26,13 @@ POSTGRES_PASSWORD: <dit_sikre_password>
 ### 3. Kør Docker
 
 ```bash
-  docker-compose up -d
+  sudo docker compose up -d
+```
+
+Tjek evt. at din container kører med:
+
+```bash
+sudo docker ps
 ```
 
 ### 4. Tilføj den nye remote Postgres server i PgAdmin (på din lokale maskine)
@@ -38,14 +44,14 @@ POSTGRES_PASSWORD: <dit_sikre_password>
 ### Hvis du ønsker at stoppe Docker
 
 ```bash
-  docker-compose down
+  sudo docker compose down
 ```
 
 ### Nulstilling af Postgres (fjerner alle databaserne)
 
 (-v) // remove volumes
 ```bash
- docker-compose down -v 
+ sudo docker-compose down -v 
 ```
 
 ```bash
